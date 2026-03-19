@@ -7,15 +7,21 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a14; color: rgba(255,255,255,0.85); line-height: 1.7; }
-        .container { max-width: 700px; margin: 0 auto; padding: 40px 24px; }
+        .container { max-width: 700px; margin: 0 auto; padding: 40px 24px 80px; }
         h1 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 8px; }
         .updated { color: rgba(255,255,255,0.35); font-size: 14px; margin-bottom: 40px; }
-        h2 { font-size: 20px; font-weight: 700; color: #fff; margin-top: 36px; margin-bottom: 12px; }
+        h2 { font-size: 20px; font-weight: 700; color: #fff; margin-top: 40px; margin-bottom: 12px; }
+        h3 { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.9); margin-top: 20px; margin-bottom: 8px; }
         p, li { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
         ul { padding-left: 24px; margin-bottom: 16px; }
         a { color: #06b6d4; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .back { display: inline-block; margin-bottom: 24px; color: rgba(255,255,255,0.4); font-size: 14px; }
+        .highlight { background: rgba(6,182,212,0.08); border-left: 3px solid #06b6d4; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .highlight p { margin-bottom: 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 14px; color: rgba(255,255,255,0.7); }
+        th { color: rgba(255,255,255,0.5); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -24,61 +30,251 @@
         <h1>Privacy Policy</h1>
         <p class="updated">Last updated: March 19, 2026</p>
 
-        <p>Celebalike ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <p>Celebalike ("we," "us," "our," or "the app") is an entertainment application that uses artificial intelligence to match your facial features with celebrities. We are committed to protecting your privacy and being transparent about our data practices.</p>
+
+        <div class="highlight">
+            <p><strong>Key Point:</strong> All facial processing happens entirely on your device. We never upload, store, or transmit your photos or facial data to any server.</p>
+        </div>
 
         <h2>1. Information We Collect</h2>
-        <p><strong>Camera and Photo Data:</strong> When you use Celebalike, you may take a selfie using your camera or select a photo from your photo library. This image is used solely to perform facial analysis and find your celebrity lookalike.</p>
-        <p><strong>Facial Data:</strong> The app generates a temporary facial embedding (a mathematical representation of facial features) from your photo. This is used to compare against our celebrity database.</p>
-        <p><strong>Subscription Data:</strong> If you subscribe, Apple handles all payment processing. We do not collect or store your payment information.</p>
 
-        <h2>2. How We Use Your Information</h2>
+        <h3>1.1 Information You Provide Directly</h3>
+        <table>
+            <tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr>
+            <tr><td>Camera photos</td><td>Facial analysis for celebrity matching</td><td>Temporary (session only)</td></tr>
+            <tr><td>Photo library images</td><td>Facial analysis for celebrity matching</td><td>Temporary (session only)</td></tr>
+        </table>
+
+        <h3>1.2 Information Generated Automatically</h3>
+        <table>
+            <tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr>
+            <tr><td>Facial embeddings</td><td>Mathematical representation for matching</td><td>Temporary (in-memory only, never saved to disk)</td></tr>
+            <tr><td>Match results</td><td>Display celebrity matches</td><td>Temporary (session only)</td></tr>
+            <tr><td>Subscription status</td><td>Manage access to premium features</td><td>Managed by Apple via StoreKit</td></tr>
+            <tr><td>Free scan usage count</td><td>Track number of free scans used</td><td>Local device storage (UserDefaults)</td></tr>
+            <tr><td>App review prompt flag</td><td>Ensure review prompt shown only once</td><td>Local device storage (UserDefaults)</td></tr>
+        </table>
+
+        <h3>1.3 Information We Do NOT Collect</h3>
         <ul>
-            <li>To analyze your photo and find celebrity matches</li>
-            <li>To display match results within the app</li>
-            <li>To generate shareable result cards</li>
+            <li>We do <strong>not</strong> collect your name, email address, phone number, or any account information</li>
+            <li>We do <strong>not</strong> collect your location data</li>
+            <li>We do <strong>not</strong> collect device identifiers (IDFA, IDFV)</li>
+            <li>We do <strong>not</strong> use analytics, tracking, or advertising SDKs</li>
+            <li>We do <strong>not</strong> collect browsing history or app usage patterns</li>
+            <li>We do <strong>not</strong> collect contacts, calendars, or any other personal data</li>
+            <li>We do <strong>not</strong> use cookies or similar tracking technologies</li>
+            <li>We do <strong>not</strong> collect or store biometric data permanently</li>
         </ul>
 
-        <h2>3. Data Processing and Storage</h2>
-        <p><strong>All facial analysis is performed entirely on your device.</strong> Your photos and facial data are never uploaded to any server. The facial embedding is generated locally using on-device AI models and is not stored permanently.</p>
-        <p>We do not:</p>
+        <h2>2. How We Process Your Photos</h2>
+
+        <h3>2.1 On-Device Processing</h3>
+        <p>When you take a selfie or select a photo, the following happens <strong>entirely on your device</strong>:</p>
+        <ol style="padding-left: 24px; margin-bottom: 16px;">
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Your photo is loaded into temporary memory</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">An AI model (SCRFD) detects your face and identifies facial landmarks</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Your face is aligned to a standard position for comparison</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">An AI model (ArcFace R50) generates a 512-dimensional mathematical embedding</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">This embedding is compared against pre-computed celebrity embeddings stored locally</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">The closest matches are displayed</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Your photo and embedding are discarded when you leave the results screen</li>
+        </ol>
+
+        <h3>2.2 No Server Communication</h3>
+        <p>At no point during this process is any data sent to any server. The AI models run locally on your device's processor. The celebrity database is bundled within the app itself. <strong>No internet connection is required for facial matching.</strong></p>
+
+        <h3>2.3 Shared Results</h3>
+        <p>If you choose to share your results, a share card image is generated locally on your device. The sharing is handled by iOS's native share sheet. We do not intercept, store, or have access to shared content. Where you share it (Messages, Instagram, etc.) is governed by those platforms' privacy policies.</p>
+
+        <h2>3. Biometric Data</h2>
+
+        <h3>3.1 Definition</h3>
+        <p>The facial embeddings generated by our AI models constitute biometric data under certain privacy laws (including the Illinois Biometric Information Privacy Act, Texas CUBI, and Washington state law).</p>
+
+        <h3>3.2 Our Handling of Biometric Data</h3>
         <ul>
-            <li>Upload your photos to any server</li>
-            <li>Store your facial data after the session ends</li>
-            <li>Share your photos or facial data with any third party</li>
-            <li>Use your photos for any purpose other than finding celebrity matches</li>
+            <li><strong>Collection:</strong> Facial embeddings are generated on-device only when you actively use the scan feature</li>
+            <li><strong>Storage:</strong> Embeddings exist only in temporary device memory (RAM) and are never written to disk or persistent storage</li>
+            <li><strong>Retention:</strong> Embeddings are automatically destroyed when you close the results screen, switch apps, or close the app</li>
+            <li><strong>Sharing:</strong> Embeddings are never transmitted, shared, sold, or disclosed to any third party</li>
+            <li><strong>Purpose:</strong> Embeddings are used solely for comparing your face against our celebrity database within the same session</li>
+            <li><strong>Destruction:</strong> No manual deletion is necessary as data is automatically purged from memory</li>
         </ul>
+
+        <h3>3.3 Consent</h3>
+        <p>By using the camera or photo selection feature of the app, you consent to the temporary on-device processing of your facial data as described above. You may withdraw consent at any time by simply not using the scan feature or by deleting the app.</p>
 
         <h2>4. Celebrity Database</h2>
-        <p>Our celebrity database contains publicly available information (names and profile photos) sourced from The Movie Database (TMDB). This data is stored locally on your device as part of the app. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
-
-        <h2>5. Third-Party Services</h2>
-        <p><strong>Apple StoreKit:</strong> We use Apple's StoreKit framework to manage subscriptions. All payment processing is handled by Apple. Please refer to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> for details on how Apple handles your payment data.</p>
-
-        <h2>6. Children's Privacy</h2>
-        <p>Celebalike is intended for users aged 12 and older. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a> and we will take steps to address the issue.</p>
-
-        <h2>7. Data Retention</h2>
-        <p>Photos you take or select are held in temporary memory only during your active session. Once you close the results screen or exit the app, this data is discarded. We do not maintain any database of user photos or facial data.</p>
-
-        <h2>8. Your Rights</h2>
-        <p>Since we do not collect or store personal data on any server, there is no personal data for us to provide, modify, or delete. All processing happens locally on your device.</p>
-        <p>If you are located in the European Economic Area (EEA), California, or other jurisdictions with data protection laws, you have the right to:</p>
+        <p>The app contains a pre-built database of celebrity names, thumbnail photos, and pre-computed facial embeddings. This data is:</p>
         <ul>
-            <li>Request information about data processing</li>
-            <li>Request deletion of any data we may hold</li>
-            <li>Opt out of data collection</li>
+            <li>Sourced from The Movie Database (TMDB), a publicly available database of entertainment professionals</li>
+            <li>Stored locally within the app bundle on your device</li>
+            <li>Not modifiable by users</li>
+            <li>Used solely for the purpose of facial comparison matching</li>
         </ul>
-        <p>To exercise these rights, contact us at <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a>.</p>
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
 
-        <h2>9. Security</h2>
-        <p>We take the security of your data seriously. All facial processing occurs on your device using industry-standard AI models. No data is transmitted over the internet during the facial matching process.</p>
+        <h2>5. Subscriptions and Payments</h2>
+        <p>All subscription management and payment processing is handled entirely by Apple through the App Store and StoreKit framework. We:</p>
+        <ul>
+            <li>Do <strong>not</strong> collect or store any payment information (credit card numbers, billing addresses, etc.)</li>
+            <li>Do <strong>not</strong> have access to your Apple ID or App Store account details</li>
+            <li>Only receive a binary subscription status (active or inactive) from Apple's StoreKit API</li>
+            <li>Store your subscription status check locally on your device</li>
+        </ul>
+        <p>For information about how Apple handles your payment data, please refer to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-        <h2>10. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+        <h2>6. Third-Party Services</h2>
+        <table>
+            <tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
+            <tr><td>Apple StoreKit</td><td>Subscription management</td><td>None (Apple manages locally)</td></tr>
+            <tr><td>Apple App Store</td><td>App distribution</td><td>Standard App Store data per Apple's policy</td></tr>
+            <tr><td>iOS Share Sheet</td><td>User-initiated sharing</td><td>Only what user chooses to share</td></tr>
+        </table>
+        <p>We do <strong>not</strong> use any of the following:</p>
+        <ul>
+            <li>Analytics services (Google Analytics, Firebase, Mixpanel, etc.)</li>
+            <li>Advertising networks (AdMob, Facebook Ads, etc.)</li>
+            <li>Crash reporting services (Crashlytics, Sentry, etc.)</li>
+            <li>Attribution or tracking services</li>
+            <li>Social login services</li>
+            <li>Cloud storage services</li>
+        </ul>
 
-        <h2>11. Contact Us</h2>
-        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+        <h2>7. Data Security</h2>
+        <ul>
+            <li>All processing occurs on-device using Apple's hardware security features</li>
+            <li>No data is transmitted over the internet during facial processing</li>
+            <li>No user data is stored on any server or cloud service</li>
+            <li>The app does not create any user accounts or databases</li>
+            <li>Temporary data in RAM is protected by iOS's memory isolation</li>
+            <li>The app uses HTTPS for any external links (privacy policy, terms of service)</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+
+        <h3>8.1 Age Requirement</h3>
+        <p>Celebalike is intended for users aged 12 and older. We do not knowingly collect personal information from children under the age of 13.</p>
+
+        <h3>8.2 COPPA Compliance</h3>
+        <p>In compliance with the Children's Online Privacy Protection Act (COPPA):</p>
+        <ul>
+            <li>We do not collect personal information from any users, including children</li>
+            <li>All processing is performed locally on the device</li>
+            <li>No data is transmitted to or stored on our servers</li>
+            <li>We do not use the app to market to children</li>
+        </ul>
+
+        <h3>8.3 Parental Rights</h3>
+        <p>If you are a parent or guardian and believe your child under 13 has used the app in a way that concerns you, please contact us at <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a>. Since we do not collect or store any personal data, there is no data for us to provide or delete, but we are happy to address any concerns.</p>
+
+        <h2>9. Your Privacy Rights</h2>
+
+        <h3>9.1 General Rights</h3>
+        <p>Since we do not collect, store, or transmit any personal data to any server, traditional data subject rights (access, correction, deletion, portability) do not apply in the conventional sense. However, you always have the right to:</p>
+        <ul>
+            <li><strong>Stop using the app</strong> at any time</li>
+            <li><strong>Delete the app</strong> which removes all local data including the celebrity database and any cached preferences</li>
+            <li><strong>Revoke camera permissions</strong> through iOS Settings at any time</li>
+            <li><strong>Cancel your subscription</strong> through iOS Settings &gt; Apple ID &gt; Subscriptions</li>
+        </ul>
+
+        <h3>9.2 European Economic Area (GDPR)</h3>
+        <p>If you are located in the EEA, you have the following rights under the General Data Protection Regulation:</p>
+        <ul>
+            <li><strong>Right to Access:</strong> We do not store your personal data on any server. All data exists temporarily on your device only.</li>
+            <li><strong>Right to Rectification:</strong> Not applicable as we do not maintain records of your data.</li>
+            <li><strong>Right to Erasure:</strong> Deleting the app removes all locally stored data. No server-side data exists to delete.</li>
+            <li><strong>Right to Restrict Processing:</strong> You can restrict processing by revoking camera/photo permissions in iOS Settings.</li>
+            <li><strong>Right to Data Portability:</strong> Not applicable as no persistent personal data is stored.</li>
+            <li><strong>Right to Object:</strong> You may stop using the app at any time.</li>
+            <li><strong>Rights Related to Automated Decision Making:</strong> The app uses AI for facial matching for entertainment only. No decisions with legal or significant effects are made.</li>
+        </ul>
+        <p><strong>Legal Basis for Processing:</strong> Our legal basis for the temporary on-device processing of facial data is your explicit consent, which you provide by choosing to take a photo or select an image for matching.</p>
+        <p><strong>Data Protection Officer:</strong> For GDPR inquiries, contact us at <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a>.</p>
+
+        <h3>9.3 California Residents (CCPA/CPRA)</h3>
+        <p>If you are a California resident, under the California Consumer Privacy Act and California Privacy Rights Act:</p>
+        <ul>
+            <li><strong>Right to Know:</strong> We collect no personal information that is stored or transmitted. All processing is local and temporary.</li>
+            <li><strong>Right to Delete:</strong> Delete the app to remove all local data.</li>
+            <li><strong>Right to Opt-Out of Sale:</strong> We do not sell, share, or disclose any personal information to third parties.</li>
+            <li><strong>Right to Non-Discrimination:</strong> We do not discriminate against users who exercise their privacy rights.</li>
+            <li><strong>Sensitive Personal Information:</strong> Facial data is processed on-device only and never collected, stored, or shared.</li>
+        </ul>
+        <p><strong>Categories of Personal Information Collected:</strong> None. We do not collect personal information as defined by the CCPA.</p>
+        <p><strong>Sale of Personal Information:</strong> We do not sell personal information. We have not sold personal information in the preceding 12 months.</p>
+
+        <h3>9.4 Illinois Residents (BIPA)</h3>
+        <p>Under the Illinois Biometric Information Privacy Act:</p>
+        <ul>
+            <li>We generate biometric identifiers (facial embeddings) solely in temporary device memory</li>
+            <li>We do not collect, capture, store, or otherwise obtain biometric data on any server or database</li>
+            <li>We do not sell, lease, trade, or otherwise profit from biometric data</li>
+            <li>Biometric data is destroyed immediately when the scan session ends</li>
+            <li>Your consent to biometric processing is obtained when you choose to use the scan feature</li>
+        </ul>
+
+        <h3>9.5 Other US State Privacy Laws</h3>
+        <p>We comply with applicable privacy laws in all US states, including but not limited to Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), and Texas (TDPSA). Since we do not collect, store, or transmit personal data, the data subject rights under these laws are inherently satisfied.</p>
+
+        <h3>9.6 International Users</h3>
+        <p>Celebalike is available worldwide. Since all data processing occurs locally on your device, no cross-border data transfers occur. Your data remains on your device in your jurisdiction at all times.</p>
+
+        <h2>10. Data Retention</h2>
+        <table>
+            <tr><th>Data Type</th><th>Retention Period</th><th>Deletion Method</th></tr>
+            <tr><td>Photos taken/selected</td><td>Current session only</td><td>Automatically cleared from memory</td></tr>
+            <tr><td>Facial embeddings</td><td>Current session only</td><td>Automatically cleared from memory</td></tr>
+            <tr><td>Match results</td><td>Current session only</td><td>Automatically cleared from memory</td></tr>
+            <tr><td>Shared images</td><td>User-controlled</td><td>Managed by user via share destination</td></tr>
+            <tr><td>Subscription status</td><td>While subscribed</td><td>Managed by Apple</td></tr>
+            <tr><td>Free scan counter</td><td>Until app deleted</td><td>Delete app</td></tr>
+            <tr><td>Review prompt flag</td><td>Until app deleted</td><td>Delete app</td></tr>
+            <tr><td>Celebrity database</td><td>Part of app bundle</td><td>Delete app</td></tr>
+        </table>
+
+        <h2>11. How to Delete Your Data</h2>
+        <p>Since we store no data on any server, deleting the app from your device removes all data associated with Celebalike:</p>
+        <ol style="padding-left: 24px; margin-bottom: 16px;">
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Press and hold the Celebalike app icon on your home screen</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Tap "Remove App" or "Delete App"</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Confirm deletion</li>
+        </ol>
+        <p>To cancel your subscription before deleting:</p>
+        <ol style="padding-left: 24px; margin-bottom: 16px;">
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Open iOS Settings</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Tap your name (Apple ID)</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Tap Subscriptions</li>
+            <li style="color: rgba(255,255,255,0.7); margin-bottom: 8px;">Find Celebalike and tap Cancel Subscription</li>
+        </ol>
+
+        <h2>12. App Permissions</h2>
+        <table>
+            <tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>
+            <tr><td>Camera</td><td>Take selfies for celebrity matching</td><td>Optional (can use photo library instead)</td></tr>
+            <tr><td>Photo Library</td><td>Select existing photos for matching</td><td>Optional (can use camera instead)</td></tr>
+        </table>
+        <p>You can revoke these permissions at any time in iOS Settings &gt; Celebalike. The app will still function but you will not be able to scan faces without granting at least one permission.</p>
+
+        <h2>13. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+        <ul>
+            <li>The "Last updated" date at the top of this page will be revised</li>
+            <li>Material changes will be indicated in the app or app store listing</li>
+            <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
+        </ul>
+        <p>We encourage you to review this Privacy Policy periodically.</p>
+
+        <h2>14. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
         <p><strong>Email:</strong> <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a></p>
+        <p>We aim to respond to all privacy inquiries within 30 days.</p>
+
+        <div class="highlight" style="margin-top: 40px;">
+            <p><strong>Summary:</strong> Celebalike processes your photos entirely on your device. We never see, store, upload, or share your photos or facial data. The only data that leaves your device is what you explicitly choose to share using the iOS share sheet.</p>
+        </div>
     </div>
 </body>
 </html>

@@ -7,15 +7,24 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a14; color: rgba(255,255,255,0.85); line-height: 1.7; }
-        .container { max-width: 700px; margin: 0 auto; padding: 40px 24px; }
+        .container { max-width: 700px; margin: 0 auto; padding: 40px 24px 80px; }
         h1 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 8px; }
         .updated { color: rgba(255,255,255,0.35); font-size: 14px; margin-bottom: 40px; }
-        h2 { font-size: 20px; font-weight: 700; color: #fff; margin-top: 36px; margin-bottom: 12px; }
+        h2 { font-size: 20px; font-weight: 700; color: #fff; margin-top: 40px; margin-bottom: 12px; }
+        h3 { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.9); margin-top: 20px; margin-bottom: 8px; }
         p, li { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
-        ul { padding-left: 24px; margin-bottom: 16px; }
+        ul, ol { padding-left: 24px; margin-bottom: 16px; }
         a { color: #06b6d4; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .back { display: inline-block; margin-bottom: 24px; color: rgba(255,255,255,0.4); font-size: 14px; }
+        .highlight { background: rgba(6,182,212,0.08); border-left: 3px solid #06b6d4; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .highlight p { margin-bottom: 0; }
+        .warning { background: rgba(245,158,11,0.08); border-left: 3px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .warning p { margin-bottom: 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 14px; color: rgba(255,255,255,0.7); }
+        th { color: rgba(255,255,255,0.5); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .caps { font-size: 14px; color: rgba(255,255,255,0.6); }
     </style>
 </head>
 <body>
@@ -24,69 +33,218 @@
         <h1>Terms of Service</h1>
         <p class="updated">Last updated: March 19, 2026</p>
 
-        <p>Please read these Terms of Service ("Terms") carefully before using the Celebalike mobile application ("the app"). By downloading, installing, or using the app, you agree to be bound by these Terms.</p>
+        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("you," "your," or "user") and Celebalike ("we," "us," "our," or "the app"). Please read these Terms carefully before using the Celebalike mobile application.</p>
+
+        <div class="warning">
+            <p><strong>By downloading, installing, accessing, or using Celebalike, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the app.</strong></p>
+        </div>
 
         <h2>1. Description of Service</h2>
-        <p>Celebalike is an entertainment application that uses artificial intelligence to compare your facial features with a database of celebrity photos and suggest potential lookalikes. <strong>The app is for entertainment purposes only.</strong> Results are AI-generated predictions and should not be relied upon for any purpose other than entertainment.</p>
+        <p>Celebalike is a mobile entertainment application that uses artificial intelligence to analyze facial features from user-provided photos and compare them against a database of celebrity faces to suggest potential lookalikes.</p>
+
+        <div class="highlight">
+            <p><strong>Important:</strong> Celebalike is for entertainment purposes only. Match results are AI-generated predictions and are not guaranteed to be accurate, scientific, or meaningful. Do not make any decisions based on app results.</p>
+        </div>
 
         <h2>2. Eligibility</h2>
-        <p>You must be at least 12 years old to use Celebalike. If you are under 18, you represent that you have your parent or guardian's permission to use the app. By using the app, you represent and warrant that you meet these eligibility requirements.</p>
-
-        <h2>3. User Conduct</h2>
-        <p>You agree not to:</p>
+        <h3>2.1 Age Requirements</h3>
         <ul>
-            <li>Use the app for any unlawful purpose</li>
-            <li>Upload photos of other people without their consent</li>
-            <li>Attempt to reverse-engineer, decompile, or disassemble the app</li>
-            <li>Use the app to harass, bully, or defame any person</li>
-            <li>Redistribute or commercially exploit the celebrity database</li>
-            <li>Use automated systems to access the app</li>
+            <li>You must be at least <strong>12 years old</strong> to use Celebalike</li>
+            <li>If you are between 12 and 17, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf</li>
+            <li>If you are under 12, you are not permitted to use the app</li>
+        </ul>
+
+        <h3>2.2 Legal Capacity</h3>
+        <p>By agreeing to these Terms, you represent that you have the legal capacity to enter into a binding agreement, or that you have the consent of a parent or guardian who does.</p>
+
+        <h2>3. Account and Access</h2>
+        <p>Celebalike does not require you to create an account. Access to the app is managed through:</p>
+        <ul>
+            <li><strong>Free access:</strong> Limited functionality as described in the app</li>
+            <li><strong>Premium subscription:</strong> Full access to all features via a paid subscription managed through the Apple App Store</li>
         </ul>
 
         <h2>4. Subscriptions and Payments</h2>
-        <p><strong>Free Trial:</strong> Celebalike offers a 3-day free trial for new subscribers. You will not be charged during the free trial period.</p>
-        <p><strong>Subscription Price:</strong> After the free trial, the subscription costs $4.99 per week.</p>
-        <p><strong>Auto-Renewal:</strong> Your subscription will automatically renew at the end of each period unless you cancel at least 24 hours before the end of the current period.</p>
-        <p><strong>Payment:</strong> Payment will be charged to your Apple ID account at the confirmation of purchase. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
-        <p><strong>Managing Subscriptions:</strong> You can manage or cancel your subscription at any time through your device's Settings &gt; Apple ID &gt; Subscriptions.</p>
-        <p><strong>Refunds:</strong> All refund requests are handled by Apple. Please contact Apple Support for refund inquiries.</p>
 
-        <h2>5. Intellectual Property</h2>
-        <p>The app, including its design, code, AI models, and user interface, is owned by Celebalike and protected by intellectual property laws. Celebrity photos and data are sourced from The Movie Database (TMDB) and are used under their terms of service.</p>
+        <h3>4.1 Subscription Plans</h3>
+        <table>
+            <tr><th>Plan</th><th>Free Trial</th><th>Price</th><th>Billing</th></tr>
+            <tr><td>Weekly Premium</td><td>3 days free</td><td>$4.99 USD</td><td>Weekly auto-renewal</td></tr>
+        </table>
+
+        <h3>4.2 Free Trial</h3>
+        <ul>
+            <li>New subscribers are eligible for a <strong>3-day free trial</strong></li>
+            <li>You will not be charged during the free trial period</li>
+            <li>If you do not cancel before the free trial ends, your subscription will automatically begin and you will be charged</li>
+            <li>Free trial eligibility is determined by Apple and is typically limited to one per Apple ID</li>
+        </ul>
+
+        <h3>4.3 Billing and Renewal</h3>
+        <ul>
+            <li>Payment will be charged to your <strong>Apple ID account</strong> at confirmation of purchase (or at the end of the free trial)</li>
+            <li>Your subscription <strong>automatically renews</strong> at the end of each billing period unless you cancel at least <strong>24 hours before the end of the current period</strong></li>
+            <li>Your account will be charged for renewal within 24 hours prior to the end of the current period at the rate of the selected plan</li>
+            <li>Prices are in US Dollars and may vary by region based on Apple's currency conversion</li>
+            <li>Price changes will be communicated in advance through the App Store</li>
+        </ul>
+
+        <h3>4.4 Cancellation</h3>
+        <ul>
+            <li>You may cancel your subscription at any time</li>
+            <li>To cancel: Open iOS <strong>Settings &gt; [Your Name] &gt; Subscriptions &gt; Celebalike &gt; Cancel Subscription</strong></li>
+            <li>Cancellation takes effect at the end of the current billing period — you retain access until then</li>
+            <li>Deleting the app does <strong>not</strong> cancel your subscription — you must cancel through iOS Settings</li>
+        </ul>
+
+        <h3>4.5 Refunds</h3>
+        <ul>
+            <li>All purchases are processed by Apple</li>
+            <li>Refund requests must be submitted to Apple directly at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></li>
+            <li>We do not have the ability to issue refunds</li>
+            <li>Apple's refund policies apply to all transactions</li>
+        </ul>
+
+        <h2>5. Acceptable Use</h2>
+
+        <h3>5.1 Permitted Uses</h3>
+        <ul>
+            <li>Personal, non-commercial entertainment use</li>
+            <li>Sharing your own results on social media</li>
+            <li>Scanning your own face or faces of people who have given you permission</li>
+        </ul>
+
+        <h3>5.2 Prohibited Uses</h3>
+        <p>You agree NOT to:</p>
+        <ul>
+            <li>Upload or scan photos of other people <strong>without their explicit consent</strong></li>
+            <li>Use the app to harass, bully, defame, or embarrass any person</li>
+            <li>Use results to impersonate any celebrity or public figure</li>
+            <li>Reverse-engineer, decompile, disassemble, or attempt to extract the source code of the app</li>
+            <li>Extract, copy, or redistribute the celebrity database or facial embeddings</li>
+            <li>Use automated systems, bots, or scripts to access the app</li>
+            <li>Attempt to bypass subscription requirements or payment systems</li>
+            <li>Use the app for any illegal purpose or in violation of any applicable laws</li>
+            <li>Use the app for commercial purposes (advertising, marketing, reselling)</li>
+            <li>Upload content that is illegal, harmful, threatening, abusive, defamatory, or otherwise objectionable</li>
+            <li>Use the app to create deepfakes or misleading content</li>
+            <li>Attempt to identify unknown individuals using the app</li>
+        </ul>
+
+        <h2>6. Intellectual Property</h2>
+
+        <h3>6.1 Our Property</h3>
+        <p>The following are owned by Celebalike and protected by applicable intellectual property laws:</p>
+        <ul>
+            <li>The app's source code, design, and user interface</li>
+            <li>The Celebalike name, logo, and branding</li>
+            <li>AI models and algorithms used for facial matching</li>
+            <li>The compilation and arrangement of the celebrity database</li>
+        </ul>
+
+        <h3>6.2 Third-Party Content</h3>
+        <ul>
+            <li>Celebrity photos and metadata are sourced from The Movie Database (TMDB) and used in accordance with their terms</li>
+            <li>AI models (SCRFD, ArcFace) are open-source models used under their respective licenses</li>
+            <li>ONNX Runtime is provided by Microsoft under the MIT license</li>
+        </ul>
         <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
 
-        <h2>6. Disclaimer of Warranties</h2>
-        <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT:</p>
+        <h3>6.3 Your Content</h3>
+        <p>You retain all rights to photos you take or select. We do not claim any ownership over your photos. As described in our Privacy Policy, your photos are processed locally and never stored by us.</p>
+
+        <h2>7. Disclaimer of Warranties</h2>
+        <p class="caps">THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+        <p>We specifically disclaim any warranty that:</p>
         <ul>
-            <li>The app will be error-free or uninterrupted</li>
-            <li>Celebrity match results will be accurate or reliable</li>
-            <li>The app will meet your specific requirements</li>
-            <li>Any defects will be corrected</li>
+            <li>Celebrity match results will be accurate, reliable, or meaningful</li>
+            <li>The app will be error-free, secure, or uninterrupted</li>
+            <li>The app will meet your specific expectations or requirements</li>
+            <li>Any defects or errors will be corrected</li>
+            <li>The celebrity database will be complete or up-to-date</li>
+            <li>The AI models will produce consistent results</li>
         </ul>
-        <p><strong>Facial matching results are AI predictions for entertainment purposes only and are not guaranteed to be accurate.</strong></p>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, CELEBALIKE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR RELATED TO YOUR USE OF THE APP.</p>
-        <p>Our total liability shall not exceed the amount you paid for the app in the 12 months preceding the claim.</p>
+        <div class="warning">
+            <p><strong>Facial matching results are entertainment-only AI predictions. They do not represent actual familial relationships, identity verification, or scientifically validated resemblance.</strong></p>
+        </div>
 
-        <h2>8. Indemnification</h2>
-        <p>You agree to indemnify and hold harmless Celebalike and its developers from any claims, damages, or expenses arising from your use of the app or violation of these Terms.</p>
+        <h2>8. Limitation of Liability</h2>
+        <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL CELEBALIKE, ITS DEVELOPERS, AFFILIATES, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:</p>
+        <ul>
+            <li>Loss of profits, revenue, data, or use</li>
+            <li>Emotional distress or mental anguish</li>
+            <li>Damage to reputation or goodwill</li>
+            <li>Cost of substitute services</li>
+            <li>Any damages arising from reliance on match results</li>
+        </ul>
+        <p class="caps">OUR TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS ARISING FROM OR RELATED TO THE APP SHALL NOT EXCEED THE AMOUNT YOU ACTUALLY PAID US IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR FIFTY DOLLARS ($50), WHICHEVER IS GREATER.</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In such jurisdictions, our liability is limited to the maximum extent permitted by law.</p>
 
-        <h2>9. Privacy</h2>
-        <p>Your use of the app is also governed by our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+        <h2>9. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Celebalike and its developers, officers, directors, employees, agents, and licensors from and against any and all claims, damages, obligations, losses, liabilities, costs, and expenses (including attorney's fees) arising from:</p>
+        <ul>
+            <li>Your use of the app</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any third-party rights (including privacy rights)</li>
+            <li>Any content you share from the app</li>
+            <li>Scanning photos of third parties without their consent</li>
+        </ul>
 
-        <h2>10. Modifications</h2>
-        <p>We reserve the right to modify these Terms at any time. Continued use of the app after changes constitutes acceptance of the modified Terms. We will update the "Last updated" date when changes are made.</p>
+        <h2>10. Privacy</h2>
+        <p>Your use of the app is governed by our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. By using the app, you consent to the data practices described in the Privacy Policy.</p>
 
-        <h2>11. Termination</h2>
-        <p>We may terminate or suspend your access to the app at any time, without prior notice, for any reason, including if you breach these Terms.</p>
+        <h2>11. Modifications to the App and Terms</h2>
 
-        <h2>12. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to conflict of law principles.</p>
+        <h3>11.1 App Changes</h3>
+        <p>We reserve the right to modify, update, suspend, or discontinue the app (or any part of it) at any time, with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance.</p>
 
-        <h2>13. Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us at:</p>
+        <h3>11.2 Terms Changes</h3>
+        <p>We may revise these Terms at any time by updating this page. The "Last updated" date will be revised accordingly. Your continued use of the app after changes are posted constitutes acceptance of the revised Terms.</p>
+
+        <h2>12. Termination</h2>
+        <ul>
+            <li>We may terminate or suspend your access to the app immediately, without prior notice, for any reason, including breach of these Terms</li>
+            <li>You may terminate these Terms by deleting the app and canceling your subscription</li>
+            <li>Upon termination, all licenses granted to you cease immediately</li>
+            <li>Sections that by their nature should survive termination will survive (including Disclaimers, Limitation of Liability, and Indemnification)</li>
+        </ul>
+
+        <h2>13. Dispute Resolution</h2>
+
+        <h3>13.1 Informal Resolution</h3>
+        <p>Before filing any formal dispute, you agree to contact us at <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a> and attempt to resolve the dispute informally for at least 30 days.</p>
+
+        <h3>13.2 Governing Law</h3>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the United States and the State of Pennsylvania, without regard to conflict of law principles.</p>
+
+        <h3>13.3 Waiver of Class Action</h3>
+        <p class="caps">YOU AND CELEBALIKE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</p>
+
+        <h2>14. General Provisions</h2>
+
+        <h3>14.1 Entire Agreement</h3>
+        <p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and Celebalike regarding the app.</p>
+
+        <h3>14.2 Severability</h3>
+        <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.</p>
+
+        <h3>14.3 Waiver</h3>
+        <p>Our failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision.</p>
+
+        <h3>14.4 Assignment</h3>
+        <p>You may not assign or transfer these Terms without our prior written consent. We may assign our rights under these Terms without restriction.</p>
+
+        <h3>14.5 Force Majeure</h3>
+        <p>We shall not be liable for any failure or delay in performance due to causes beyond our reasonable control, including natural disasters, wars, terrorism, pandemics, labor disputes, government actions, or internet/infrastructure failures.</p>
+
+        <h3>14.6 Apple-Specific Terms</h3>
+        <p>These Terms are between you and Celebalike, not Apple. Apple is not responsible for the app or its content. Apple has no obligation to provide maintenance or support. In the event of a failure to conform to any warranty, you may notify Apple for a refund of the purchase price (if applicable); Apple has no other warranty obligation. Apple is not responsible for addressing any claims relating to the app. Apple is a third-party beneficiary of these Terms.</p>
+
+        <h2>15. Contact Us</h2>
+        <p>If you have any questions, concerns, or feedback about these Terms, please contact us:</p>
         <p><strong>Email:</strong> <a href="mailto:liamsapps.suport@gmail.com">liamsapps.suport@gmail.com</a></p>
+        <p>We aim to respond to all inquiries within 30 days.</p>
     </div>
 </body>
 </html>
